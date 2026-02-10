@@ -1,0 +1,163 @@
+:root{
+  --bg: #0b1220;
+  --panel: rgba(255,255,255,.06);
+  --border: rgba(255,255,255,.14);
+  --text: #222943;
+  --muted: rgba(238,242,255,.72);
+  --accent: #69a6ff;
+  --shadow: 0 18px 45px rgba(0,0,0,.35);
+}
+
+*{ box-sizing: border-box; }
+html, body{ margin: 0; padding: 0; }
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #eeeded;   
+  color: #0f172a;
+  line-height: 1.55;
+}
+
+/* layout */
+.wrap{
+  width: min(980px, 92%);
+  margin: 0 auto;
+}
+
+.header{
+  padding: 40px 0 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.brand{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.company{
+  margin: 0;
+  font-size: clamp(26px, 3.6vw, 44px);
+  line-height: 1.05;
+  letter-spacing: .2px;
+}
+
+/* logo */
+.logoImg{
+  width: min(320px, 85vw);        
+  height: auto;
+  object-fit: contain;
+}
+
+/* main cards */
+main{
+  padding: 18px 0 48px;
+}
+
+.card{
+  background: #ffffff;     
+  border: 0px solid #121a2b;
+  border-radius: 18px;
+  padding: 22px;
+  margin: 20px 0;
+  box-shadow:
+    0 8px 20px rgba(0,0,0,.25),
+    0 2px 6px rgba(0,0,0,.15);
+}
+
+.card h2,
+.card h3{
+  color: #222943;
+}
+
+.card p,
+.offers{
+  color: #222943;
+}
+
+/* offer cards layout */
+.offerGrid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin-top: 14px;
+}
+
+/* inner offer cards */
+.offerCard{
+  background: #eeeded;             
+  border: 0px solid #2f4675;
+  border-radius: 14px;
+  padding: 16px;
+
+}
+
+.offerCard h3{
+  margin: 0 0 8px;
+  color: #222943;
+  font-size: 18px;
+}
+
+.offerCard ul{
+  margin: 0;
+  padding-left: 18px;
+  color: #222943;
+}
+
+.offerCard li{
+  margin: 6px 0;
+}
+
+.offers strong,
+.card strong{
+  color: #222943;
+}
+
+h2{
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+p{ margin: 0; }
+strong{ font-weight: 700; }
+
+.offers{
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+.offers li{ margin: 10px 0; }
+.offers strong{ color: var(--text); }
+
+
+/* contact block */
+.contact{
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,.10);
+}
+.contact p{
+  color: var(--muted);
+}
+
+/* footer */
+.footer{
+  background: #444546;         
+  border-top: 1px solid #dbe1ee;
+  padding: 20px 0 30px;
+  color: #0f172a;          
+  text-align: center;
+}
+.footer p{
+  margin: 0;
+  color: #ffffff;
+}
+
+/* responsive */
+@media (max-width: 560px){
+  .brand{ align-items: flex-start; }
+  .logoImg{ width: 58px; max-height: 58px; padding: 8px; border-radius: 14px; }
+  .card{ padding: 16px; }
+}
