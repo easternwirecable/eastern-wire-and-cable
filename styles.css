@@ -53,6 +53,7 @@ body{
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
+  display: block;
 }
 
 /* main cards */
@@ -159,6 +160,22 @@ strong{ font-weight: 700; }
   color: #ffffff;
 }
 
+/*Canada leaf*/
+.logoWrap{
+  position: relative;
+  display: inline-block;
+  width:fit-content;
+}
+
+.canadaFlag{
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 36px;
+  height: auto;
+}
+
+
 /* responsive */
 
 @media (max-width: 560px){
@@ -174,4 +191,11 @@ strong{ font-weight: 700; }
   .card{ 
     padding: 16px; 
   }
+
+    .canadaFlag{
+    width: 22px;
+    top: 4px;
+    right: 4px;
+  }
 }
+
