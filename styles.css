@@ -24,9 +24,12 @@ body{
 }
 
 .header{
-  padding: 40px 0 24px;
+  padding: 50px 0;
   background: #ffffff;
   border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .brand{
@@ -46,7 +49,7 @@ body{
 
 /* logo */
 .logoImg{
-  width: clamp(280px, 85vw, 520px);        
+  width: clamp(280px, 85vw, 500px);        
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
@@ -157,8 +160,18 @@ strong{ font-weight: 700; }
 }
 
 /* responsive */
+
 @media (max-width: 560px){
-  .brand{ align-items: flex-start; }
-  .logoImg{ width: 58px; max-height: 58px; padding: 8px; border-radius: 14px; }
-  .card{ padding: 16px; }
+  .brand{ 
+    align-items: center; 
+  }
+
+  .logoImg{
+    width: clamp(220px, 75vw, 340px);
+    height: auto;
+  }
+
+  .card{ 
+    padding: 16px; 
+  }
 }
