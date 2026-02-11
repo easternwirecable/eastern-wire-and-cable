@@ -46,7 +46,7 @@ body{
 
 /* logo */
 .logoImg{
-  width: min(320px, 85vw);        
+  width: clamp(280px, 85vw, 520px);        
   height: auto;
   object-fit: contain;
   flex-shrink: 0;
